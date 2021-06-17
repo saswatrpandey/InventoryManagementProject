@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C0DE288-A771-4955-AEAE-0823D5B3B0D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InventoryManagementProject</RootNamespace>
+    <AssemblyName>InventoryManagementProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\SRP\Desktop\setup file\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Inventory Management</ProductName>
+    <PublisherName>Saswat Raj Pandey</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EA362F677D6940BD945DA59D8B8BAFD2AFA3D1DD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>InventoryManagementProject_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerSupplier.Designer.cs">
+      <DependentUpon>CustomerSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="inventoryManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inventoryManagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseSale.Designer.cs">
+      <DependentUpon>PurchaseSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseSaleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseSaleReport.Designer.cs">
+      <DependentUpon>PurchaseSaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityQuestion.Designer.cs">
+      <DependentUpon>SecurityQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unit.Designer.cs">
+      <DependentUpon>Unit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete Users.Designer.cs">
+      <DependentUpon>Delete Users.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerSupplier.resx">
+      <DependentUpon>CustomerSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete Users.resx">
+      <DependentUpon>Delete Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PurchaseSale.resx">
+      <DependentUpon>PurchaseSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseSaleReport.resx">
+      <DependentUpon>PurchaseSaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityQuestion.resx">
+      <DependentUpon>SecurityQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unit.resx">
+      <DependentUpon>Unit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="inventoryManagementDataSet.xsc">
+      <DependentUpon>inventoryManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="inventoryManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>inventoryManagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inventoryManagementDataSet.xss">
+      <DependentUpon>inventoryManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryManagementProject_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinClipart.com_breathing-clip-art_5657886.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart-plain-background_23-2148288244.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66-669889_wallpaper-linear-gradient-blue-white-mint-cream-aqua.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-gradient-blue-to-white-sq-format-thomas-woolworth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1557683316-973673baf926.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-turquoise-texture-gradient-background-shades-blue-panoramic-format-blue-turquoise-texture-gradient-background-shades-172467029.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12131391831582779209-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18928961701582988856-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\834623611536572527-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14_Add-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_14_Add_106230.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_14_Add_106230 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_14_Add_106230 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="inventoryManagement.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="inventoryManagement_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>inventoryManagement.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.11.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
